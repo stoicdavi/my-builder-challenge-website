@@ -426,11 +426,14 @@ function getProjectCategory(card) {
 
 // Theme toggle functionality with improved accessibility
 function initThemeToggle() {
+
     const themeToggle = document.createElement('button');
     themeToggle.innerHTML = '🌙';
     themeToggle.className = 'theme-toggle';
     themeToggle.setAttribute('aria-label', 'Toggle dark mode');
     themeToggle.setAttribute('title', 'Toggle dark/light theme');
+
+    // Default desktop style
     themeToggle.style.cssText = `
         position: fixed;
         top: 20px;
@@ -447,8 +450,41 @@ function initThemeToggle() {
         backdrop-filter: blur(10px);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     `;
-    
-    document.body.appendChild(themeToggle);
+
+    // Place in nav-container for mobile
+    const navContainer = document.querySelector('.nav-container');
+    if (window.innerWidth <= 900 && navContainer) {
+        themeToggle.style.position = 'static';
+        themeToggle.style.marginLeft = 'auto';
+        themeToggle.style.marginRight = '0.5rem';
+        themeToggle.style.top = '';
+        themeToggle.style.right = '';
+        themeToggle.style.zIndex = '1002';
+        navContainer.appendChild(themeToggle);
+    } else {
+        document.body.appendChild(themeToggle);
+    }
+
+    // Responsive reposition on resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 900 && navContainer && themeToggle.parentNode !== navContainer) {
+            themeToggle.style.position = 'static';
+            themeToggle.style.marginLeft = 'auto';
+            themeToggle.style.marginRight = '0.5rem';
+            themeToggle.style.top = '';
+            themeToggle.style.right = '';
+            themeToggle.style.zIndex = '1002';
+            navContainer.appendChild(themeToggle);
+        } else if (window.innerWidth > 900 && themeToggle.parentNode !== document.body) {
+            themeToggle.style.position = 'fixed';
+            themeToggle.style.top = '20px';
+            themeToggle.style.right = '20px';
+            themeToggle.style.marginLeft = '';
+            themeToggle.style.marginRight = '';
+            themeToggle.style.zIndex = '1001';
+            document.body.appendChild(themeToggle);
+        }
+    });
     
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-theme');
