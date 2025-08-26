@@ -8,17 +8,28 @@
 </head>
 <body>
     <main>
-        <!-- Navigation -->
+        <!-- Enhanced Navigation -->
         <nav class="main-nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">David Abisai</a>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="nav-progress"></div>
         </nav>
 
         <!-- Hero Section -->
@@ -96,6 +107,55 @@
             </div>
         </section>
 
+        <!-- Social Media & Content Section -->
+        <section class="social-content">
+            <h2>🎥 Content & Social Media</h2>
+            <div class="social-grid">
+                <div class="social-card youtube">
+                    <div class="social-icon">📺</div>
+                    <h3>YouTube Channel</h3>
+                    <p>DeAnTeachnologies - Educational content on cloud computing, IoT development, and tech tutorials. Join me as I share practical knowledge and hands-on demonstrations.</p>
+                    <a href="https://www.youtube.com/@DeAnTeachnologies" target="_blank" class="social-link">Visit Channel →</a>
+                </div>
+                
+                <div class="social-card blog">
+                    <div class="social-icon">📝</div>
+                    <h3>Tech Blog</h3>
+                    <p>In-depth articles on cloud engineering, IoT projects, and development experiences. Read about my latest projects and technical insights.</p>
+                    <a href="https://dev.to/stoicdavi" target="_blank" class="social-link">Read Articles →</a>
+                </div>
+                
+                <div class="social-card twitter">
+                    <div class="social-icon">🐦</div>
+                    <h3>X (Twitter)</h3>
+                    <p>Follow my daily tech journey, quick tips, industry insights, and real-time updates on my projects and learning experiences.</p>
+                    <a href="https://x.com/DavidNanji9396" target="_blank" class="social-link">Follow Me →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Highlight Section -->
+        <section class="blog-highlight">
+            <h2>📝 Latest from My Blog</h2>
+            <div class="blog-preview">
+                <div class="blog-card">
+                    <h3>Bringing Back the 80s: My Journey Creating Robotron 2084 in HTML5</h3>
+                    <p>Discover how I recreated the classic 80s arcade game Robotron 2084 using HTML5 and Amazon Q CLI. A nostalgic journey through game development and AI-assisted coding.</p>
+                    <div class="blog-meta">
+                        <span class="blog-date">Recent Post</span>
+                        <span class="blog-platform">Dev.to</span>
+                    </div>
+                    <a href="https://dev.to/stoicdavi/bringing-back-the-80s-my-journey-creating-robotron-2084-in-html5-using-amazonq-cli-ae6" target="_blank" class="blog-link">Read Full Article →</a>
+                </div>
+                
+                <div class="blog-cta">
+                    <h3>Follow My Tech Journey</h3>
+                    <p>I regularly write about cloud computing, IoT development, and my experiences in the tech industry. Join me as I share insights, tutorials, and lessons learned.</p>
+                    <a href="https://dev.to/stoicdavi" target="_blank" class="cta-button">Visit My Blog</a>
+                </div>
+            </div>
+        </section>
+
         <!-- Fun Facts Section (keeping original) -->
         <section class="fun-facts">
             <h3>Fun Facts About Me</h3>
@@ -136,7 +196,44 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 David Abisai. Built with ❤️ on AWS</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>David Abisai</h4>
+                <p>Cloud Engineer | IoT Developer | Community Leader</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Follow My Content</h4>
+                <div class="social-links">
+                    <a href="https://dev.to/stoicdavi" target="_blank" class="social-link blog">
+                        <span class="social-icon">📝</span>
+                        <span>Blog</span>
+                    </a>
+                    <a href="https://www.youtube.com/@DeAnTeachnologies" target="_blank" class="social-link youtube">
+                        <span class="social-icon">📺</span>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://x.com/DavidNanji9396" target="_blank" class="social-link twitter">
+                        <span class="social-icon">🐦</span>
+                        <span>X (Twitter)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 David Abisai. Built with ❤️ on AWS</p>
+        </div>
     </footer>
     
     <script src="script.js"></script>
