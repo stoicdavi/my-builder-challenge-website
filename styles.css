@@ -1278,6 +1278,71 @@ footer {
 }
 
 /* Responsive Design */
+/* Universal mobile responsiveness improvements */
+@media (max-width: 900px) {
+    .main-nav, .nav-container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .main-nav ul {
+        gap: 1.2rem;
+    }
+    .hero {
+        padding: 2.5rem 0.5rem;
+    }
+    .about-content, .skills-grid, .projects-grid, .goals-grid, .certifications-grid, .contact-methods, .reference-grid, .leadership-grid, .facts-grid, .availability-grid, .learning-timeline {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem !important;
+    }
+    .project-card, .skill-category, .stat-card, .experience-item, .cert-category, .goal-card, .fact-card, .award-card, .soft-skill-card, .education-item, .cert-detail-card, .learning-item, .availability-card, .leadership-item, .contact-method, .references, .role-card {
+        padding: 1.2rem !important;
+        font-size: 1rem;
+    }
+    section {
+        padding: 1.2rem 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav, .nav-container {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+    .main-nav a {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+    }
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .project-card, .skill-category, .stat-card, .experience-item, .cert-category, .goal-card, .fact-card, .award-card, .soft-skill-card, .education-item, .cert-detail-card, .learning-item, .availability-card, .leadership-item, .contact-method, .references, .role-card {
+        padding: 0.7rem !important;
+        font-size: 0.95rem;
+        border-radius: 8px !important;
+    }
+    .blog-card h3, .blog-cta h3, .project-card h3, .skill-category h3, .stat-card h3, .experience-item h3, .cert-category h3, .goal-card h3, .fact-card h3, .award-card h3, .soft-skill-card h3, .education-item h3, .cert-detail-card h3, .learning-item h3, .availability-card h3, .leadership-item h3, .contact-method h3, .references h3, .role-card h3 {
+        font-size: 1rem !important;
+    }
+    .about-content, .skills-grid, .projects-grid, .goals-grid, .certifications-grid, .contact-methods, .reference-grid, .leadership-grid, .facts-grid, .availability-grid, .learning-timeline {
+        grid-template-columns: 1fr !important;
+        gap: 0.7rem !important;
+    }
+    section {
+        padding: 0.7rem 0.2rem;
+    }
+    .footer, footer {
+        padding: 1rem 0.2rem;
+        font-size: 0.95rem;
+    }
+}
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
@@ -1965,10 +2030,35 @@ body.dark-theme .contact-submit-btn:hover:not(:disabled) {
 }
 
 .blog-preview {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    align-items: start;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+        align-items: start;
+}
+
+@media (max-width: 900px) {
+    .blog-preview {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .blog-card, .blog-cta {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-preview {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .blog-card, .blog-cta {
+        padding: 1rem;
+        border-radius: 8px;
+        font-size: 0.98rem;
+    }
+    .blog-card h3, .blog-cta h3 {
+        font-size: 1.1rem;
+    }
 }
 
 .blog-card {
